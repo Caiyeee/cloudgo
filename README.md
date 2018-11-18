@@ -50,7 +50,7 @@
 
    `-c 100` ，`Concurrency Level：100` 表示并发个数为100
 
-   `http://localhost:8080/caiye` 表示这些请求的目标 URL
+   `http://localhost:8080/caiye` 表示这些请求的目标 URL，其中 `caiye` 为参数 `{name}`，可任意替换
 
    `Time taken for tests：0.288 seconds ` 表示总请求时间
 
@@ -64,7 +64,7 @@
 
    `Document Length: 22 bytes` 表示文档返回的长度，不包括响应头
 
-   其中，对压力测试的结果，重点关注**吞吐率（Requests per second）、用户平均请求等待时间（Time per request）**这两个指标。
+   其中，对压力测试的结果，重点关注 **吞吐率（Requests per second）、用户平均请求等待时间（Time per request）** 这两个指标。
 
    1. 吞吐率是基于并发用户数的，即吞吐率和并发用户数相关，不同的并发用户数下，吞吐率一般是不同的。且这个数值表示当前机器的整体性能，值越大越好。
    2. 吞吐率计算公式：总请求数 / 处理完成所有请求数所花费的时间

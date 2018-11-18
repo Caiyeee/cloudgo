@@ -18,7 +18,7 @@
 
    结果如下：
 
-   ![](pics\curl.png)
+   ![](pics/curl.png)
 
    正确获取并返回输入的 name：caiye，测试成功
 
@@ -30,9 +30,9 @@
 
    结果如下：
 
-   ![](pics\ab1.png)
+   ![](pics/ab1.png)
 
-   ![](pics\ab2.png)
+   ![](pics/ab2.png)
 
    可以看到，0 失败，0 错误，总共用时 0.288 秒，平均每个请求耗时 28.824 ms.
 
@@ -40,7 +40,7 @@
 
    同时可以看到，运行监听程序的终端窗口，有如下信息（仅截出部分）：
 
-   ![](pics\listen.png)
+   ![](pics/listen.png)
 
    
 

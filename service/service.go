@@ -19,7 +19,7 @@ func NewServer() *negroni.Negroni {
 	})
 
 	// 初始化路由器
-	router.HandleFunc("/hello/{nname}", handler(format)).Methods("GET")
+	router.HandleFunc("/{name}", handler(format)).Methods("GET")
 
 	// 添加中间件
 	server.UseHandler(router)
@@ -27,14 +27,14 @@ func NewServer() *negroni.Negroni {
 	return server
 }
 
-
+// 请求处理函数，闭包函数
 func handler(format *render.Render) http.HandlerFunc {
 	return func(writer http.ResponseWriter, request *http.Request) {
 		// 获得请求
-		vars := mux.Vars(request)
+		params := mux.Vars(request)
 		// 解析请求内容
-		name := vars["name"]
+		name := params["name"]
 		// 渲染模板
-		format.JSON(writer, http.StatusOK, map[string]string{name : name})
+		format.JSON(writer, http.StatusOK, map[string]string{"name" : name})
 	}
 }
